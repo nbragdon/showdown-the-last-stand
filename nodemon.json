@@ -1,0 +1,9 @@
+{
+  "ignore": [
+    "gulpfile.babel.js",
+    "build",
+    "media",
+    "src",
+    "test"
+  ]
+}

@@ -1,0 +1,25 @@
+
+{% extends "layout.njk" %}
+
+{% block body %}
+
+  <div class="container">
+    <div class="jumbotron m-t-1">
+      <h1>
+        {% if moment().format('HH') >= 12 and moment().format('HH') <= 17 %}
+          {{ __('Good afternoon') }},
+        {% elif moment().format('HH') >= 17 %}
+          {{ __('Good evening') }},
+        {% else %}
+          {{ __('Good morning') }},
+        {% endif %}
+        <span> {{user.display_name}}!</span>
+      </h1>
+      <p>This is your account page.</p>
+      <h2>API Key</h2>
+      <code id="api-key">{{ user.api_token }}</code>
+      <button class="btn btn-secondary btn-sm" data-toggle="clipboard" data-clipboard-target="#api-key"><i class="fa fa-clipboard"></i> Copy</button>
+    </div>
+  </div>
+
+{% endblock %}

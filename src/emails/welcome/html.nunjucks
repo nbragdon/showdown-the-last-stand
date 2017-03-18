@@ -1,0 +1,2 @@
+<p>Hi {{ name }},</p>
+<p>Welcome to our website!  Thank you for signing up.</p>
